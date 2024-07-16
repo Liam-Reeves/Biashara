@@ -6,9 +6,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHop</title>
+    <title>Shop</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://kit.fontawesome.com/fd48f3693c.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home'%}">Home</a></li>
+            <li><a href="{% url 'products'%}">Products</a>
+                <ul class="dropdown-content">
+                    <a href="#">Electronics</a>
+                    <a href="#">Clothing & Accessories</a>
+                    <a href="#">Home & Kitchen</a>
+                    <a href="#">Sports & Outdoors</a>
+                    <a href="#">Beauty & Personal Care</a>
+                </ul>
+            </li>
+            <li><a href="{% url 'deals'%}">Deals & Offers</a></li>
+            <li><a href="{% url  'cart' %}">Cart</a></li>
+            <li><a href="{% url 'contact' %}"> Contact</a></li>
+            <li><a href="{% url 'about'%}">About</a></li>
+          
+   
+        </ul>
+    </nav>
+   
 
 
 
@@ -21,7 +44,7 @@
 
 
 
-
+<script src="{% static 'js/shop.js' %}"></script>
 {% block body %}
 
 {% endblock %}

@@ -7,16 +7,28 @@ from .models import Category, Customer, Product
 
 # Create your views here.
 
-def index(request):
+def home(request):
     context ={}
-    return render(request, "index.html")
-def store(request):
+    return render(request, "home.html")
+def products(request):
     context ={}
-    return render(request, "store.html")
+    return render(request, "products.html")
+
+def deals(request):
+    context ={}
+    return render(request, "deals.html")
 
 def cart(request):
     context ={}
     return render(request, "cart.html")
+
+def contact(request):
+    context ={}
+    return render(request, "contact.html")
+
+def about(request):
+    context ={}
+    return render(request, "about.html")
 
 
 
